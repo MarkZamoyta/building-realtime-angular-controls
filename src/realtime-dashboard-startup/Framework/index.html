@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Realtime Controls in AngularJS</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/angular-gridster.min.css" rel="stylesheet" />
+    <link href="app/app.css" rel="stylesheet" />
+    <link href="ext-modules/psFramework/psFramework.css" rel="stylesheet" />
+    <link href="ext-modules/psMenu/psMenu.css" rel="stylesheet" />
+    <link href="ext-modules/psDashboard/psDashboard.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+    <script src="Scripts/jquery.resize.js"></script>
+    <script src="Scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-gridster.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/ngStorage.min.js"></script>
+
+    <script src="http://localhost:50447/signalr/hubs"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script>
+        google.load('visualization', '1.0', { 'packages': ['gauge'] });
+        google.setOnLoadCallback(function () {
+            angular.bootstrap(document, ['app']);
+        });
+    </script>
+
+
+
+    <script src="ext-modules/psMenu/psMenuModule.js"></script>
+    <script src="ext-modules/psMenu/psMenuController.js"></script>
+    <script src="ext-modules/psMenu/psMenuDirective.js"></script>
+    <script src="ext-modules/psMenu/psMenuItemDirective.js"></script>
+    <script src="ext-modules/psMenu/psMenuGroupDirective.js"></script>
+
+    <script src="ext-modules/psDashboard/psDashboardModule.js"></script>
+    <script src="ext-modules/psDashboard/psDashboardDirective.js"></script>
+    <script src="ext-modules/psDashboard/psWidgetBodyDirective.js"></script>
+
+    <script src="ext-modules/psFramework/psFrameworkModule.js"></script>
+    <script src="ext-modules/psFramework/psFrameworkController.js"></script>
+    <script src="ext-modules/psFramework/psFrameworkDirective.js"></script>
+    <script src="ext-modules/psFramework/psUserProfile/psUserProfileSmallDirective.js"></script>
+    <script src="ext-modules/psFramework/psUserProfile/psUserProfileDirective.js"></script>
+
+    <script src="ext-modules/psCharts/psChartsModule.js"></script>
+    <script src="ext-modules/psCharts/psGaugeDirective.js"></script>
+
+    <script src="ext-modules/psWebMetricsService/psWebMetricsService.js"></script>
+
+    <script src="app/appModule.js"></script>
+    <script src="app/appConfig.js"></script>
+    <script src="app/appRouteConfig.js"></script>
+
+    <script src="app/directives/rtaDashboardDirective.js"></script>
+
+
+    <!-- widget JavaScript files -->
+    <script src="app/widgets/rtaGauge/rtaGaugeWidgetDirective.js"></script>
+
+    <!-- setting dialogs -->
+    <script src="app/dialogs/rtaSelectMetricController.js"></script>
+
+</head>
+<body class="container-fluid">
+
+    
+    <ps-framework title="Realtime Controls in AngularJS"
+                    subtitle="by Mark Zamoyta"
+                    icon-file="images/ng.png">
+        <ps-menu>
+            <ps-menu-item label="Dashboard" icon="fa-dashboard" route="dashboard"></ps-menu-item>
+        </ps-menu>
+    </ps-framework>
+
+
+
+</body>
+</html>
